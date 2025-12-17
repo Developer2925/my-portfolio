@@ -182,8 +182,8 @@ const About = ({ darkMode }) => {
         >
           About
         </h2>
-        <div className="flex w-full justify-around md:grid-cols-2 gap-6">
-          <div className="w-1/2">
+        <div className="md:flex w-full justify-around md:grid-cols-2 gap-6">
+          <div className="md:w-1/2">
             <p
               className={`leading-relaxed mb-6 transition-colors ${
                 darkMode ? "text-gray-300" : "text-gray-700"
@@ -204,7 +204,7 @@ const About = ({ darkMode }) => {
               coffee.
             </p>
           </div>
-          <div className="w-1/2">
+          <div className="w-full md:w-1/2 mt-8 md:mt-0">
             <h3
               className={`text-lg font-medium mb-4 transition-colors ${
                 darkMode ? "text-white" : "text-black"
@@ -212,7 +212,7 @@ const About = ({ darkMode }) => {
             >
               Skills
             </h3>
-            <div className="md:grid grid-cols-3 gap-2">
+            <div className="grid md:grid-cols-3 grid-cols-2 gap-2">
               {[
                 "React",
                 "JavaScript",
@@ -318,7 +318,7 @@ const Work = ({ darkMode }) => {
               }`}
             >
               <div
-                className={`md:h-48 h-40 relative overflow-hidden ${
+                className={`md:h-48 h-36 relative overflow-hidden ${
                   darkMode
                     ? "bg-gradient-to-br from-gray-700 to-gray-800"
                     : "bg-gradient-to-br from-gray-100 to-gray-200"
