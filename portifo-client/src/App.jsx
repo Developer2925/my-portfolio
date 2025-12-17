@@ -585,6 +585,7 @@ const Contact = ({ darkMode }) => {
             <div className="space-y-6">
               <a
                 href="mailto:omdhakulkar2925@gmail.com"
+                target="_blank"
                 className={`flex items-center gap-4 transition-colors group ${
                   darkMode
                     ? "text-gray-300 hover:text-white"
@@ -613,6 +614,7 @@ const Contact = ({ darkMode }) => {
               </a>
 
               <a
+                target="_blank"
                 href="https://github.com/Developer2925"
                 className={`flex items-center gap-4 transition-colors group ${
                   darkMode
@@ -642,6 +644,7 @@ const Contact = ({ darkMode }) => {
               </a>
 
               <a
+                target="_blank"
                 href="https://www.linkedin.com/in/om-dhakulkar/"
                 className={`flex items-center gap-4 transition-colors group ${
                   darkMode
