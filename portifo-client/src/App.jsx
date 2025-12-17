@@ -28,7 +28,7 @@ const Navigation = ({
     <nav
       className={`fixed top-0 left-0 right-0 z-50 border-b transition-colors ${
         darkMode
-          ? "bg-black/80 backdrop-blur-sm border-gray-800"
+          ? "bg-[#1a1a1a]/80 backdrop-blur-sm border-gray-800"
           : "bg-white/80 backdrop-blur-sm border-gray-100"
       }`}
     >
@@ -135,7 +135,7 @@ const Hero = ({ darkMode }) => {
     <section
       id="hero"
       className={`min-h-screen flex items-center justify-center px-6 transition-colors ${
-        darkMode ? "bg-black" : "bg-white"
+        darkMode ? "bg-[#1a1a1a]" : "bg-white"
       }`}
     >
       <div className="max-w-4xl text-center">
@@ -171,7 +171,7 @@ const About = ({ darkMode }) => {
     <section
       id="about"
       className={`min-h-screen flex items-center justify-center px-6 py-20 transition-colors ${
-        darkMode ? "bg-black" : "bg-white"
+        darkMode ? "bg-[#1a1a1a]" : "bg-white"
       }`}
     >
       <div className="max-w-4xl">
@@ -296,7 +296,7 @@ const Work = ({ darkMode }) => {
     <section
       id="work"
       className={`min-h-screen flex items-center justify-center px-6 py-20 transition-colors ${
-        darkMode ? "bg-black" : "bg-gray-50"
+        darkMode ? "bg-[#1a1a1a]" : "bg-gray-50"
       }`}
     >
       <div className="max-w-6xl w-full">
@@ -313,7 +313,7 @@ const Work = ({ darkMode }) => {
               key={index}
               className={`border overflow-hidden hover:shadow-lg transition-all duration-300 group ${
                 darkMode
-                  ? "bg-gray-900 border-gray-700 hover:border-gray-600"
+                  ? "bg-[#161616] border-gray-700 hover:border-gray-600"
                   : "bg-white border-gray-200"
               }`}
             >
@@ -327,15 +327,15 @@ const Work = ({ darkMode }) => {
                 <div
                   className={`absolute inset-0 transition-colors duration-300 md:flex justify-center items-center ${
                     darkMode
-                      ? "bg-black/0 group-hover:bg-black/10"
-                      : "bg-black/0 group-hover:bg-black/5"
+                      ? "bg-[#1a1a1a]/0 group-hover:bg-[#1a1a1a]/10"
+                      : "bg-[#1a1a1a]/0 group-hover:bg-[#1a1a1a]/5"
                   }`}
                 >
                   <img src={project.image} alt="" className="" />
                 </div>
                 <div
                   className={`absolute top-4 right-4 px-3 py-1 text-xs font-medium ${
-                    darkMode ? "bg-gray-800 text-white" : "bg-white text-black"
+                    darkMode ? "bg-[#1a1a1a] text-white" : "bg-white text-black"
                   }`}
                 >
                   {project.year}
@@ -382,7 +382,7 @@ const Work = ({ darkMode }) => {
                       key={tech}
                       className={`text-xs px-3 py-1 border transition-colors ${
                         darkMode
-                          ? "border-gray-700 text-gray-300 hover:bg-gray-800"
+                          ? "border-gray-700 text-gray-300 hover:bg-[#1a1a1a]"
                           : "border-gray-200 text-gray-700 hover:bg-gray-100"
                       }`}
                     >
@@ -427,7 +427,7 @@ const Contact = ({ darkMode }) => {
     <section
       id="contact"
       className={`min-h-screen flex items-center justify-center px-6 py-20 transition-colors ${
-        darkMode ? "bg-black" : "bg-white"
+        darkMode ? "bg-[#1a1a1a]" : "bg-white"
       }`}
     >
       <div className="max-w-4xl w-full">
@@ -502,7 +502,7 @@ const Contact = ({ darkMode }) => {
                     required
                     className={`w-full px-4 py-3 border focus:outline-none transition-colors ${
                       darkMode
-                        ? "bg-gray-800 border-gray-700 text-white focus:border-white"
+                        ? "bg-[#161616] border-gray-700 text-white focus:border-white"
                         : "bg-white border-gray-300 text-black focus:border-gray-900"
                     }`}
                     placeholder="Your name"
@@ -526,7 +526,7 @@ const Contact = ({ darkMode }) => {
                     required
                     className={`w-full px-4 py-3 border focus:outline-none transition-colors ${
                       darkMode
-                        ? "bg-gray-800 border-gray-700 text-white focus:border-white"
+                        ? "bg-[#161616] border-gray-700 text-white focus:border-white"
                         : "bg-white border-gray-300 text-black focus:border-gray-900"
                     }`}
                     placeholder="your.email@example.com"
@@ -550,7 +550,7 @@ const Contact = ({ darkMode }) => {
                     rows="5"
                     className={`w-full px-4 py-3 border focus:outline-none transition-colors resize-none ${
                       darkMode
-                        ? "bg-gray-800 border-gray-700 text-white focus:border-white"
+                        ? "bg-[#161616] border-gray-700 text-white focus:border-white"
                         : "bg-white border-gray-300 text-black focus:border-gray-900"
                     }`}
                     placeholder="Tell me about your project..."
@@ -561,7 +561,7 @@ const Contact = ({ darkMode }) => {
                   className={`w-full py-3 px-6 transition-colors flex items-center justify-center gap-2 group ${
                     darkMode
                       ? "bg-white text-black hover:bg-gray-200"
-                      : "bg-black text-white hover:bg-gray-800"
+                      : "bg-[#1a1a1a] text-white hover:bg-gray-800"
                   }`}
                 >
                   Send Message
@@ -684,7 +684,7 @@ const Footer = ({ darkMode }) => {
   return (
     <footer
       className={`border-t py-8 transition-colors ${
-        darkMode ? "bg-black border-gray-800" : "bg-white border-gray-100"
+        darkMode ? "bg-[#1a1a1a] border-gray-800" : "bg-white border-gray-100"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 text-center">
