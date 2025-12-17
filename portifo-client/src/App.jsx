@@ -28,7 +28,7 @@ const Navigation = ({
     <nav
       className={`fixed top-0 left-0 right-0 z-50 border-b transition-colors ${
         darkMode
-          ? "bg-gray-900/80 backdrop-blur-sm border-gray-800"
+          ? "bg-black/80 backdrop-blur-sm border-gray-800"
           : "bg-white/80 backdrop-blur-sm border-gray-100"
       }`}
     >
@@ -135,7 +135,7 @@ const Hero = ({ darkMode }) => {
     <section
       id="hero"
       className={`min-h-screen flex items-center justify-center px-6 transition-colors ${
-        darkMode ? "bg-gray-900" : "bg-white"
+        darkMode ? "bg-black" : "bg-white"
       }`}
     >
       <div className="max-w-4xl text-center">
@@ -171,7 +171,7 @@ const About = ({ darkMode }) => {
     <section
       id="about"
       className={`min-h-screen flex items-center justify-center px-6 py-20 transition-colors ${
-        darkMode ? "bg-gray-900" : "bg-white"
+        darkMode ? "bg-black" : "bg-white"
       }`}
     >
       <div className="max-w-4xl">
@@ -296,7 +296,7 @@ const Work = ({ darkMode }) => {
     <section
       id="work"
       className={`min-h-screen flex items-center justify-center px-6 py-20 transition-colors ${
-        darkMode ? "bg-gray-800" : "bg-gray-50"
+        darkMode ? "bg-black" : "bg-gray-50"
       }`}
     >
       <div className="max-w-6xl w-full">
@@ -427,7 +427,7 @@ const Contact = ({ darkMode }) => {
     <section
       id="contact"
       className={`min-h-screen flex items-center justify-center px-6 py-20 transition-colors ${
-        darkMode ? "bg-gray-900" : "bg-white"
+        darkMode ? "bg-black" : "bg-white"
       }`}
     >
       <div className="max-w-4xl w-full">
@@ -684,7 +684,7 @@ const Footer = ({ darkMode }) => {
   return (
     <footer
       className={`border-t py-8 transition-colors ${
-        darkMode ? "bg-gray-900 border-gray-800" : "bg-white border-gray-100"
+        darkMode ? "bg-black border-gray-800" : "bg-white border-gray-100"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 text-center">
