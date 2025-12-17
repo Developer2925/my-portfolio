@@ -40,7 +40,7 @@ const Navigation = ({
               darkMode ? "text-white" : "text-black"
             }`}
           >
-            ＯＭ　ＤＨＡＫＵＬＫＡＲ
+            ＰＯＲＴＦＯＬＩＯ
           </a>
 
           <div className="hidden md:flex items-center space-x-8">
