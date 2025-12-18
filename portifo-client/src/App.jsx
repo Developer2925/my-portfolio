@@ -22,7 +22,7 @@ const Navigation = ({
   setDarkMode,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const navItems = ["Home", "About", "Work", "Contact"];
+  const navItems = ["Home", "About", "Work", "Education", "Contact"];
 
   return (
     <nav
@@ -134,7 +134,7 @@ const Hero = ({ darkMode }) => {
   return (
     <section
       id="hero"
-      className={`min-h-screen flex items-center justify-center px-6 transition-colors ${
+      className={`sticky top-0 min-h-screen flex items-center justify-center px-6 transition-colors ${
         darkMode ? "bg-[#1a1a1a]" : "bg-white"
       }`}
     >
@@ -227,8 +227,10 @@ const About = ({ darkMode }) => {
               ].map((skill) => (
                 <div key={skill} className="my-1">
                   <div
-                    className={`transition-colors border rounded px-2 py-1 ${
-                      darkMode ? "text-gray-300" : "text-gray-700"
+                    className={`transition-colors px-2 py-1 ${
+                      darkMode
+                        ? "text-gray-300 border border-gray-700 hover:border-gray-600"
+                        : "text-gray-700 border border-gray-300 hover:border-black"
                     }`}
                   >
                     {skill}
@@ -296,10 +298,10 @@ const Work = ({ darkMode }) => {
     <section
       id="work"
       className={`min-h-screen flex items-center justify-center px-6 py-20 transition-colors ${
-        darkMode ? "bg-[#1a1a1a]" : "bg-gray-50"
+        darkMode ? "bg-[#1a1a1a]" : "bg-white"
       }`}
     >
-      <div className="max-w-6xl w-full">
+      <div className="max-w-4xl w-full">
         <h2
           className={`text-4xl md:text-5xl font-light mb-12 tracking-tight transition-colors ${
             darkMode ? "text-white" : "text-black"
@@ -314,7 +316,7 @@ const Work = ({ darkMode }) => {
               className={`border overflow-hidden hover:shadow-lg transition-all duration-300 group ${
                 darkMode
                   ? "bg-[#161616] border-gray-700 hover:border-gray-600"
-                  : "bg-white border-gray-200"
+                  : "bg-gray-50 border-gray-200"
               }`}
             >
               <div
@@ -393,6 +395,184 @@ const Work = ({ darkMode }) => {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const Education = ({ darkMode }) => {
+  const education = [
+    {
+      degree:
+        "Bachelor of Technology in Electronics and Telecommunication Engineering",
+      institution: "Anjuman College of Engineering and Technology",
+      location: "India",
+      period: "2020 - 2024",
+      description:
+        "Specialized in Electronics, Telecommunication and Software Engineering. Thesis on Frontend Designing and Development of a Business Website.",
+      achievements: [
+        "CGPA: 7.7/10",
+        "Published `Frontend Designing and Development of a Business Website` in JETIR",
+      ],
+    },
+    {
+      degree: "Japanese Language Curriculum",
+      institution: "京進ランゲージアカデミー (Kyoshin Language Academy)",
+      location: "Shinjuku, Tokyo, Japan",
+      period: "2025 - Present",
+      description:
+        "Intensive Japanese language program focusing on conversational skills, grammar, and cultural understanding to achieve fluency.",
+      achievements: ["Achieved N2 Level Proficiency in the Japanese Language"],
+    },
+  ];
+
+  const certifications = [
+    {
+      name: "Web Technologies, Java and SQL Training Program",
+      issuer: "QSpiders Pvt. Ltd.",
+      year: "2024",
+    },
+    {
+      name: "Self-paced MERN Stack Development",
+      issuer: "Devtown",
+      year: "2023",
+    },
+    {
+      name: "MySQL Development",
+      issuer: "LinkedIn Learning",
+      year: "2022",
+    },
+  ];
+
+  return (
+    <section
+      className={`min-h-screen flex items-center justify-center px-6 py-20 transition-colors ${
+        darkMode ? "bg-[#1a1a1a]" : "bg-white"
+      }`}
+    >
+      <div className="max-w-4xl w-full">
+        <h2
+          className={`text-4xl md:text-5xl font-light mb-12 tracking-tight transition-colors ${
+            darkMode ? "text-white" : "text-black"
+          }`}
+        >
+          Education
+        </h2>
+
+        <div className="space-y-12 mb-16">
+          {education.map((edu, index) => (
+            <div
+              key={index}
+              className={`border-l-2 pl-6 transition-colors ${
+                darkMode ? "border-gray-700" : "border-gray-300"
+              }`}
+            >
+              <div className="flex flex-wrap items-start justify-between mb-3">
+                <div>
+                  <h3
+                    className={`text-xl font-medium mb-1 transition-colors ${
+                      darkMode ? "text-white" : "text-black"
+                    }`}
+                  >
+                    {edu.degree}
+                  </h3>
+                  <p
+                    className={`text-lg mb-1 transition-colors ${
+                      darkMode ? "text-gray-400" : "text-gray-600"
+                    }`}
+                  >
+                    {edu.institution}
+                  </p>
+                  <p
+                    className={`text-sm transition-colors ${
+                      darkMode ? "text-gray-500" : "text-gray-500"
+                    }`}
+                  >
+                    {edu.location}
+                  </p>
+                </div>
+                <span
+                  className={`text-sm px-3 py-1 border mt-2 md:mt-0 transition-colors ${
+                    darkMode
+                      ? "border-gray-700 text-gray-400"
+                      : "border-gray-300 text-gray-600"
+                  }`}
+                >
+                  {edu.period}
+                </span>
+              </div>
+              <p
+                className={`mb-4 leading-relaxed transition-colors ${
+                  darkMode ? "text-gray-300" : "text-gray-700"
+                }`}
+              >
+                {edu.description}
+              </p>
+              <ul className="space-y-2">
+                {edu.achievements.map((achievement, idx) => (
+                  <li key={idx} className="flex items-start">
+                    <div
+                      className={`w-1.5 h-1.5 rounded-full mt-2 mr-3 flex-shrink-0 transition-colors ${
+                        darkMode ? "bg-gray-500" : "bg-gray-400"
+                      }`}
+                    ></div>
+                    <span
+                      className={`text-sm transition-colors ${
+                        darkMode ? "text-gray-400" : "text-gray-600"
+                      }`}
+                    >
+                      {achievement}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div>
+          <h3
+            className={`text-2xl font-light mb-6 tracking-tight transition-colors ${
+              darkMode ? "text-white" : "text-black"
+            }`}
+          >
+            Certifications
+          </h3>
+          <div className="grid md:grid-cols-3 gap-4">
+            {certifications.map((cert, index) => (
+              <div
+                key={index}
+                className={`p-4 border transition-colors ${
+                  darkMode
+                    ? "bg-[#1a1a1a] border-gray-700 hover:border-gray-600"
+                    : "bg-gray-50 border-gray-200 hover:border-gray-400"
+                }`}
+              >
+                <p
+                  className={`font-medium mb-2 transition-colors ${
+                    darkMode ? "text-white" : "text-black"
+                  }`}
+                >
+                  {cert.name}
+                </p>
+                <p
+                  className={`text-sm mb-1 transition-colors ${
+                    darkMode ? "text-gray-400" : "text-gray-600"
+                  }`}
+                >
+                  {cert.issuer}
+                </p>
+                <p
+                  className={`text-xs transition-colors ${
+                    darkMode ? "text-gray-500" : "text-gray-500"
+                  }`}
+                >
+                  {cert.year}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -717,7 +897,9 @@ export default function Portfolio() {
 
   return (
     <div
-      className={`transition-colors ${darkMode ? "bg-gray-900" : "bg-white"}`}
+      className={`overscroll-y-none transition-colors ${
+        darkMode ? "bg-gray-900" : "bg-white"
+      }`}
     >
       <Navigation
         activeSection={activeSection}
@@ -733,6 +915,9 @@ export default function Portfolio() {
       </div>
       <div id="work">
         <Work darkMode={darkMode} />
+      </div>
+      <div id="education">
+        <Education darkMode={darkMode} />
       </div>
       <div id="contact">
         <Contact darkMode={darkMode} />
