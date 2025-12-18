@@ -14,6 +14,7 @@ import {
   Moon,
   Sun,
 } from "lucide-react";
+import LocomotiveScroll from "locomotive-scroll";
 
 const Navigation = ({
   activeSection,
@@ -35,7 +36,7 @@ const Navigation = ({
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <a
-            href="#"
+            href="#home"
             className={`text-xl font-light tracking-wider ${
               darkMode ? "text-white" : "text-black"
             }`}
@@ -133,8 +134,8 @@ const Navigation = ({
 const Hero = ({ darkMode }) => {
   return (
     <section
-      id="hero"
-      className={`sticky top-0 min-h-screen flex items-center justify-center px-6 transition-colors ${
+      id="home"
+      className={`min-h-screen flex items-center justify-center px-6 transition-colors ${
         darkMode ? "bg-[#1a1a1a]" : "bg-white"
       }`}
     >
@@ -895,11 +896,10 @@ export default function Portfolio() {
     localStorage.setItem("darkMode", darkMode.toString());
   }, [darkMode]);
 
+  const locomotiveScroll = new LocomotiveScroll();
   return (
     <div
-      className={`overscroll-y-none transition-colors ${
-        darkMode ? "bg-gray-900" : "bg-white"
-      }`}
+      className={`transition-colors ${darkMode ? "bg-[#1a1a1a]" : "bg-white"}`}
     >
       <Navigation
         activeSection={activeSection}
