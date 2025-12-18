@@ -14,6 +14,8 @@ import {
   Moon,
   Sun,
 } from "lucide-react";
+// Vendors
+
 import LocomotiveScroll from "locomotive-scroll";
 
 const Navigation = ({
@@ -882,6 +884,8 @@ const Footer = ({ darkMode }) => {
 };
 
 export default function Portfolio() {
+  const locomotiveScroll = new LocomotiveScroll();
+
   const [activeSection, setActiveSection] = useState("Home");
   const [darkMode, setDarkMode] = useState(false);
 
@@ -896,10 +900,11 @@ export default function Portfolio() {
     localStorage.setItem("darkMode", darkMode.toString());
   }, [darkMode]);
 
-  const locomotiveScroll = new LocomotiveScroll();
   return (
     <div
-      className={`transition-colors ${darkMode ? "bg-[#1a1a1a]" : "bg-white"}`}
+      className={`transition-colors data-scroll ${
+        darkMode ? "bg-[#1a1a1a]" : "bg-white"
+      }`}
     >
       <Navigation
         activeSection={activeSection}
